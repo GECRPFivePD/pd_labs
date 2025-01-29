@@ -1,0 +1,352 @@
+@font-face {
+  font-family: "Joyride STD";
+  src: url("https://db.onlinewebfonts.com/t/406b56da0c31245c249b3a3c61560d1a.eot");
+  src: url("https://db.onlinewebfonts.com/t/406b56da0c31245c249b3a3c61560d1a.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/406b56da0c31245c249b3a3c61560d1a.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/406b56da0c31245c249b3a3c61560d1a.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/406b56da0c31245c249b3a3c61560d1a.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/406b56da0c31245c249b3a3c61560d1a.svg#Joyride W05 STD")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("https://db.onlinewebfonts.com/t/0744a43ed7aac352ec78c1404c890d72.eot");
+  src: url("https://db.onlinewebfonts.com/t/0744a43ed7aac352ec78c1404c890d72.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/0744a43ed7aac352ec78c1404c890d72.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/0744a43ed7aac352ec78c1404c890d72.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/0744a43ed7aac352ec78c1404c890d72.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/0744a43ed7aac352ec78c1404c890d72.svg#Gilroy-Light")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("https://db.onlinewebfonts.com/t/040a78b437acd0433612f92e61d04a1b.eot");
+  src: url("https://db.onlinewebfonts.com/t/040a78b437acd0433612f92e61d04a1b.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/040a78b437acd0433612f92e61d04a1b.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/040a78b437acd0433612f92e61d04a1b.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/040a78b437acd0433612f92e61d04a1b.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/040a78b437acd0433612f92e61d04a1b.svg#Gilroy-Medium")
+      format("svg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* @font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url("https://db.onlinewebfonts.com/t/000833a3a58fb083c44b9de42c2ff0a2.eot");
+  src: url("https://db.onlinewebfonts.com/t/000833a3a58fb083c44b9de42c2ff0a2.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/000833a3a58fb083c44b9de42c2ff0a2.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/000833a3a58fb083c44b9de42c2ff0a2.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/000833a3a58fb083c44b9de42c2ff0a2.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/000833a3a58fb083c44b9de42c2ff0a2.svg#Gilroy-SemiBold")format("svg");
+} */
+
+@font-face {
+  font-family: "HACKED";
+  src: url("/assets/fonts/HACKED.ttf");
+}
+
+@font-face {
+  font-family: "PSemiBold";
+  src: url("/assets/fonts/PitagonSansMono-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "PMedium";
+  src: url("/assets/fonts/PitagonSansMono-Medium.ttf");
+}
+
+.darkweb-container {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.creator-container, .seller-container {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(0%, -50%);
+}
+
+.status-container {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(0%, -50%);
+  background: rgba(21, 21, 21);
+  opacity: 0.9;
+  box-shadow: 0px 0px 38px 12px rgba(41, 171, 106, 0.3);
+}
+
+.management-container {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.red-borders {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      50% 158.02% at 46.41% 50%,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.702) 49.98%,
+      rgba(11, 34, 8, 0.9) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  border: 1px solid #313131;
+  border: 1px solid #313131;
+}
+
+.black-opa {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(13, 14, 16, 0.4) 0%,
+    rgba(13, 14, 16, 0.4) 100%
+  );
+  border: 1px solid #313131;
+}
+
+.title {
+  font-family: "Joyride STD";
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 12.7px rgba(255, 255, 255, 0.61);
+  font-size: 1.6rem;
+  margin: .8rem 0;
+}
+
+.card {
+  border: 1px solid #313131;
+  padding: .5rem;
+  border-radius: 1.5px;
+  background: #181818;
+}
+
+.garage-type {
+  font-family: "Gilroy-Medium";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #cdcdcd;
+  border: 1px solid #313131;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.garage-type.active {
+    border: 2px solid #84fa6f;
+    box-shadow: 0px 0px 3px #84fa6f;
+  }
+  
+
+.garage-type:hover {
+  scale: 1.02;
+  border: 2px solid #84fa6f;
+}
+
+.input-parent-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Gilroy-Medium";
+  border: 1px solid #313131;
+  background-color: rgba(0, 0, 0, 10%);
+  padding: 0.3rem !important;
+  border-radius: 1.75px;
+}
+
+.input-parent-container:has(.input:focus) {
+  border: 1px solid #29AB6A;
+}
+
+.label {
+  font-family: "Gilroy-Light";
+  color: #828282;
+  font-size: 0.8rem;
+}
+
+.input {
+  font-family: "Gilroy-Medium";
+  color: #ececec;
+  margin-top: -0.3rem;
+}
+
+.lab-type {
+  cursor: pointer;
+}
+
+.ownership-type {
+  cursor: pointer;
+}
+
+.lab-type.active, .ownership-type.active {
+  border: 2px solid #29AB6A;
+  filter: drop-shadow(0px 0px 8.8px rgba(41, 171, 106, 0.26));
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #103422;
+  font-family: "Joyride STD";
+  border: 2px solid #29AB6A;
+  border-radius: 4px;
+  color: #54FEA9;
+  padding: .55rem;
+  font-size: 1.3rem;
+  cursor: pointer
+}
+
+.btn-red {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #280E0E;
+  font-family: "Joyride STD";
+  border: 1.5px solid #FF4D4D;
+  border-radius: 4px;
+  color: #FF4D4D;
+  padding: .55rem;
+  font-size: 1.3rem;
+  cursor: pointer
+}
+
+.btn-red.disabled {
+  background: #190909;
+  color: #a13232;
+  border: 3.5px solid #a13232;
+}
+
+.btn.disabled {
+  background: #103422;
+  border: 3.5px solid #1e7a4c;
+  color: #28a064;
+}
+
+.btn:not(.disabled):hover {
+  box-shadow: 0px 0px 3px #3be273c7;
+  scale: 1.005;
+}
+.btn-red:not(.disabled):hover {
+  box-shadow: 0px 0px 3px #280E0E;
+  scale: 1.005;
+}
+
+#barometer-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 15rem;
+	margin-left: 60rem;
+}
+
+
+.upgrade-hover {
+  cursor: pointer;
+  display: flex;
+  transition: all 120ms ease;
+}
+
+.item.active {
+  border: 1px solid #54FEA9;
+}
+
+.item-upgrade:hover .upgrade-hover {
+  opacity: 1;
+  border: 1px solid #54FEA9;
+}
+
+.glow-orange {
+  background: #F6B946;
+  box-shadow: 0px 0px 5.8px 2px rgba(214, 161, 63, 0.25);
+  border-radius: 16px;
+}
+
+.glow-green {
+  background: #46D08B;
+  box-shadow: 0px 0px 5.2px 2px rgba(70, 208, 139, 0.25);
+  border-radius: 16px;
+}
+
+.glow-red {
+  background: #FF3535;
+  box-shadow: 0px 0px 5.2px 2px rgba(255, 53, 53, 0.25);
+  border-radius: 16px;
+}
+
+.status {
+  color: #54FEA9;
+}
+
+.status.disabled {
+  color: #FF4D4D;
+}
+
+.keyholder {
+  font-family: "Gilroy-Light";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #313131;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 0.84rem;
+  cursor: pointer;
+  border-radius: 1.5px;
+}
+
+.keyholder:hover .hover {
+  opacity: 1;
+  background-color: #db3543;
+  border: none;
+}
+
+.hover {
+  opacity: 0;
+  transition: all 0.3s ease;
+  border-radius: 1.5px;
+  box-shadow: 0px 0px 4px rgba(255, 73, 95, 0.5);
+}
+
+.hover svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: #eeeeee;
+  scale: 0.7;
+}

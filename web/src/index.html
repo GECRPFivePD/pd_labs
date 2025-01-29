@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nokia 3310</title>
+    <link rel="stylesheet" href="./dokia.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./termo.scss" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      type="module"
+      src="https://bernii.github.io/gauge.js/dist/gauge.min.js"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <div class="phone-container" style="display: none">
+      <div class="oval-container">
+        <div class="nokia3310">
+          <div class="nokia-head-container">
+            <div class="speaker">
+              <div class="hole"></div>
+              <div class="hole"></div>
+              <div class="hole"></div>
+              <div class="hole"></div>
+              <div class="hole"></div>
+            </div>
+            <div class="logo">DOKIA</div>
+            <div class="screen-container" style="display: none">
+              <div value="coke" class="contact-col active">Simeon (Coke)</div>
+              <div value="meth" class="contact-col">Nikola (Meth)</div>
+              <div value="weed" class="contact-col">Mike (Weed)</div>
+              <div value="weed" class="contact-col">Dan (Equipment)</div>
+            </div>
+            <div class="screen-container2" style="display: none">
+              <div id="calling-anim" class="top-row">Calling...</div>
+              <div id="number" class="middle-row">+5399328212</div>
+              <div class="bottom-row">End</div>
+            </div>
+            <div class="screen-container3" style="display: none">
+              <div id="calling-anim" class="top-row">
+                <div class="left">
+                  <img src="phone-icon.png" alt="" />
+                  <span>Call 1</span>
+                </div>
+                <div id="time" class="right"></div>
+              </div>
+              <div id="number" class="middle-row"></div>
+              <div class="bottom-row">End</div>
+            </div>
+            <div class="bottom-oval">
+              <div class="big button top"></div>
+            </div>
+          </div>
+          <div class="bottom-buttons">
+            <div class="big button left">
+              <span>C</span>
+            </div>
+            <div class="big button right">
+              <span>&lt;</span>
+              <span>&gt;</span>
+            </div>
+          </div>
+          <div class="keyboard">
+            <div class="button-key-container">
+              <div class="button-key left">
+                <span class="special">1</span>
+                <span class="minitext compact">o_o</span>
+              </div>
+            </div>
+            <div class="button-key-container">
+              <div class="button-key middle">
+                <span class="special">2</span>
+                <span class="minitext">abc</span>
+              </div>
+            </div>
+            <div class="button-key-container invert">
+              <div class="button-key right">
+                <span class="special">3</span>
+                <span class="minitext">def</span>
+              </div>
+            </div>
+            <div class="button-key-container">
+              <div class="button-key left">
+                <span class="special">4</span>
+                <span class="minitext">ghi</span>
+              </div>
+            </div>
+            <div class="button-key-container">
+              <div class="button-key middle">
+                <span class="special">5</span>
+                <span class="minitext">jkl</span>
+              </div>
+            </div>
+            <div class="button-key-container invert">
+              <div class="button-key right">
+                <span class="special">6</span>
+                <span class="minitext">mno</span>
+              </div>
+            </div>
+            <div class="button-key-container">
+              <div class="button-key left">
+                <span class="special">7</span>
+                <span class="minitext">pqrs</span>
+              </div>
+            </div>
+            <div class="button-key-container">
+              <div class="button-key middle">
+                <span class="special">8</span>
+                <span class="minitext">tuv</span>
+              </div>
+            </div>
+            <div class="button-key-container invert">
+              <div class="button-key right">
+                <span class="special">9</span>
+                <span class="minitext">wxyz</span>
+              </div>
+            </div>
+            <div class="button-key-container">
+              <div class="button-key left">
+                <span class="special">*</span>
+                <span class="minitext">+</span>
+              </div>
+            </div>
+            <div class="button-key-container">
+              <div class="button-key middle">
+                <span class="special">0</span>
+                <span class="minitext rotate">[</span>
+              </div>
+            </div>
+            <div class="button-key-container invert">
+              <div class="button-key right">
+                <span class="special">#</span>
+                <span class="minitext home"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="creator-container hidden w-[28rem] bg-[#1a1a1a] rounded-sm">
+      <div class="title">CREATE LABORATORY</div>
+      <div class="flex flex-col gap-2 px-6 mt-6">
+        <div class="input-parent-container">
+          <div class="flex flex-row justify-between items-center">
+            <div class="flex flex-col">
+              <div class="label">LABORATORY LABEL</div>
+              <input
+                type="text"
+                id="lab-name"
+                class="w-full bg-transparent outline-none text-[1.2rem] input"
+              />
+            </div>
+            <img src="/assets/icons/name-tag.svg" class="h-6 mr-1" />
+          </div>
+        </div>
+        <div class="input-parent-container">
+          <div class="flex flex-row justify-between items-center">
+            <div class="flex flex-col">
+              <div class="label">PURSHACE PRICE</div>
+              <input
+                type="text"
+                id="lab-price"
+                class="w-full bg-transparent outline-none text-[1.2rem] input"
+              />
+            </div>
+            <img src="/assets/icons/price.svg" class="h-4 mr-1" />
+          </div>
+        </div>
+        <div class="input-parent-container">
+          <div class="label">BLIP COLOR</div>
+          <div
+            class="flex flex-row justify-center gap-[.3rem] mt-1 mb-[.25rem]"
+          >
+            <div value="27" class="c-blip-color h-11 w-11 rounded-md" style="background-color: rgba(240, 153, 153, 255);"></div>
+            <div value="7" class="c-blip-color h-11 w-11 rounded-md" style="background-color: rgba(235, 36, 39, 255);"></div>
+            <div value="39" class="c-blip-color h-11 w-11 rounded-md" style="background-color: rgba(234, 142, 80, 255);"></div>
+            <div value="12" class="c-blip-color h-11 w-11 rounded-md" style="background-color: rgba(240, 200, 80, 255);"></div>
+            <div value="9" class="c-blip-color h-11 w-11 rounded-md" style="background-color: rgba(93, 182, 229, 255);"></div>
+            <div value="24" class="c-blip-color h-11 w-11 rounded-md" style="background-color: 	rgba(203, 54, 148, 255);"></div>
+            <div value="19" class="c-blip-color h-11 w-11 rounded-md" style="background-color: 	rgba(185, 230, 185, 255);"></div>
+            <div value="18" class="c-blip-color h-11 w-11 rounded-md" style="background-color: 	rgba(114, 204, 114, 255);"></div>
+          </div>
+        </div>
+        <div class="input-parent-container">
+          <div class="label">LABORATORY TYPE</div>
+          <div class="flex flex-col gap-2 mt-1">
+            <div
+              value="weed"
+              class="lab-type flex justify-center items-center border-[1px] border-[#373737] rounded-sm bg-[#1a1a1a] text-white w-full p-2"
+            >
+              WEED LABORATORY
+            </div>
+            <div
+              value="coke"
+              class="lab-type flex justify-center items-center border-[1px] border-[#373737] rounded-sm bg-[#1a1a1a] text-white w-full p-2"
+            >
+              COKE LABORATORY
+            </div>
+            <div
+              value="meth"
+              class="lab-type flex justify-center items-center border-[1px] border-[#373737] rounded-sm bg-[#1a1a1a] text-white w-full p-2"
+            >
+              METH LABORATORY
+            </div>
+          </div>
+        </div>
+        <div class="input-parent-container">
+          <div class="label">PREVIEW IMAGE</div>
+          <img id="preview-img" src="/assets/previews/coke-lab.jpeg" class="mt-1 rounded-sm" />
+        </div>
+        <div id="create-lab" class="btn mb-4 disabled">CREATE LABORATORY</div>
+      </div>
+    </div>
+
+    <div class="seller-container hidden w-[28rem] bg-[#1a1a1a] rounded-sm">
+      <div class="title">BUY LABORATORY</div>
+      <div class="flex flex-col gap-2 px-6 mt-6">
+        <div class="input-parent-container">
+          <div class="flex flex-row justify-between items-center">
+            <div class="flex flex-col">
+              <div class="label">LABORATORY LABEL</div>
+              <input
+                type="text"
+                id="lab-name2"
+                disabled
+                value="BALLAS LAB"
+                class="w-full bg-transparent outline-none text-[1.2rem] input"
+              />
+            </div>
+            <img src="/assets/icons/name-tag.svg" class="h-6 mr-1" />
+          </div>
+        </div>
+        <div class="input-parent-container">
+          <div class="flex flex-row justify-between items-center">
+            <div class="flex flex-col">
+              <div class="label">PURSHACE PRICE</div>
+              <input
+                type="text"
+                id="lab-price2"
+                disabled
+                value="200,000$"
+                class="w-full bg-transparent outline-none text-[1.2rem] input"
+              />
+            </div>
+            <img src="/assets/icons/price.svg" class="h-4 mr-1" />
+          </div>
+        </div>
+        <div class="input-parent-container">
+          <div class="flex flex-row justify-between items-center">
+            <div class="flex flex-col">
+              <div class="label">LABORATORY TYPE</div>
+              <input
+                type="text"
+                id="lab-type3"
+                disabled
+                value="COKE LABORATORY"
+                class="w-full bg-transparent outline-none text-[1.2rem] input"
+              />
+            </div>
+            <img src="/assets/icons/pill.svg" class="h-7 mr-1" />
+          </div>
+        </div>
+        <div class="input-parent-container">
+          <div class="label">OWNERSHIP TYPE</div>
+          <div class="flex flex-col gap-2 mt-1">
+            <div
+              value="personal"
+              class="ownership-type flex justify-center items-center border-[1px] border-[#373737] rounded-sm bg-[#1a1a1a] text-white w-full p-2"
+            >
+              PERSONAL
+            </div>
+            <div
+              value="gang"
+              class="ownership-type flex justify-center items-center border-[1px] border-[#373737] rounded-sm bg-[#1a1a1a] text-white w-full p-2"
+            >
+              GANG
+            </div>
+          </div>
+        </div>
+        <div class="input-parent-container">
+          <div class="label">PREVIEW IMAGE</div>
+          <img id="preview-img2" src="/assets/previews/coke-lab.jpeg" class="mt-1 rounded-sm" />
+        </div>
+        <div id="buy-lab" class="btn mb-4 disabled">BUY LABORATORY</div>
+      </div>
+    </div>
+
+    <div
+      class="management-container hidden w-[80rem] h-[45rem] bg-[#1a1a1a] rounded"
+    >
+      <div class="title text-[1.9rem] mb-3">MANAGE YOUR LABORATORY</div>
+      <div class="flex justify-evenly h-[82%]">
+        <div class="flex flex-col gap-2 w-[32%] h-full justify-between">
+          <div class="flex flex-col card gap-2">
+            <div class="input-parent-container">
+              <div class="flex flex-row justify-between items-center">
+                <div class="flex flex-col">
+                  <div class="label">LABORATORY LABEL</div>
+                  <input
+                    type="text"
+                    id="lab-name3"
+                    value="BALLAS LAB"
+                    class="w-full bg-transparent outline-none text-[1.2rem] input"
+                  />
+                </div>
+                <img src="/assets/icons/name-tag.svg" class="h-6 mr-1" />
+              </div>
+            </div>
+            <div class="input-parent-container">
+              <div class="label">BLIP COLOR</div>
+              <div
+                class="flex flex-row justify-center gap-[.3rem] mt-1 mb-[.25rem]"
+              >
+                <div value="27" class="c-blip-color h-11 w-11 rounded-md" style="background-color: rgba(240, 153, 153, 255);"></div>
+                <div value="7" class="c-blip-color h-11 w-11 rounded-md" style="background-color: rgba(235, 36, 39, 255);"></div>
+                <div value="39" class="c-blip-color h-11 w-11 rounded-md" style="background-color: rgba(234, 142, 80, 255);"></div>
+                <div value="12" class="c-blip-color h-11 w-11 rounded-md" style="background-color: rgba(240, 200, 80, 255);"></div>
+                <div value="9" class="c-blip-color h-11 w-11 rounded-md" style="background-color: rgba(93, 182, 229, 255);"></div>
+                <div value="24" class="c-blip-color h-11 w-11 rounded-md" style="background-color: 	rgba(203, 54, 148, 255);"></div>
+                <div value="19" class="c-blip-color h-11 w-11 rounded-md" style="background-color: 	rgba(185, 230, 185, 255);"></div>
+                <div value="18" class="c-blip-color h-11 w-11 rounded-md" style="background-color: 	rgba(114, 204, 114, 255);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row gap-2 mt-2">
+            <div class="card w-[43%] h-full p-[.5rem]">
+              <div
+                style="
+                  height: 66.6%;
+                  font-family: Gilroy-Light;
+                  font-size: 0.7rem;
+                  line-height: 11px;
+                  overflow: auto;
+                "
+                id="keyholders-list"
+                class="h-[60%] gap-1 flex flex-col items-center text-center bg-[#1b1b1b] text-white rounded-sm w-full border-[1px] border-[#333333] text-[#ececec] p-1"
+              >
+                <div class="flex keyholder justify-center items-center w-[100%] p-2">Lenny Wood</div>
+                <div class="flex keyholder justify-center items-center w-[100%] p-2">Lenny Wood</div>
+              </div>
+              <div
+                class="input-parent-container mt-4 h-18 p-[.2rem]"
+                style="border: 1px solid #29ab6a"
+              >
+                <div class="flex flex-row justify-between items-center">
+                  <div class="flex flex-col">
+                    <div class="label" style="font-size: 0.7rem">PLAYER ID</div>
+                    <input
+                      type="text"
+                      id="keyholder-id"
+                      class="w-full bg-transparent outline-none text-[1rem] input"
+                    />
+                  </div>
+                  <img src="/assets/icons/person.svg" class="h-5 mr-1" />
+                </div>
+              </div>
+              <div
+                id="share-key-btn"
+                class="btn border-[2.5px] text-[.9rem] mt-[.8rem] rounded-[5px]"
+              >
+                SHARE KEY
+              </div>
+            </div>
+            <div class="card flex flex-col w-[59%] h-full gap-1">
+              <div class="flex flex-col gap-1 h-3/4">
+                <div class="input-parent-container h-18 p-[.2rem]">
+                  <div class="label" style="font-size: 0.7rem">
+                    CURRENT OWNER
+                  </div>
+                  <input
+                  disabled
+                    type="text"
+                    id="owner-name"
+                    value="JACK WILLIAMS"
+                    class="w-full bg-transparent outline-none text-[0.95rem] input"
+                  />
+                </div>
+                <div class="input-parent-container h-18 p-[.2rem]">
+                  <div class="label" style="font-size: 0.7rem">
+                    OWNERSHIP TYPE
+                  </div>
+                  <input
+                  disabled
+                    type="text"
+                    id="ownership-type2"
+                    value="PERSONAL"
+                    class="w-full bg-transparent outline-none text-[0.95rem] input"
+                  />
+                </div>
+                <div class="input-parent-container h-18 p-[.2rem]">
+                  <div class="label" style="font-size: 0.7rem">LAB TYPE</div>
+                  <input
+                    type="text"
+                    id="lab-type2"
+                    disabled
+                    value="METH LABORATORY"
+                    class="w-full bg-transparent outline-none text-[0.95rem] input"
+                  />
+                </div>
+                <div class="input-parent-container h-18 p-[.2rem]">
+                  <div class="label" style="font-size: 0.7rem">EQUIPMENTS</div>
+                  <input
+                    type="text"
+                    id="lab-equipped"
+                    disabled
+                    value="INSTALLED"
+                    class="w-full bg-transparent outline-none text-[0.95rem] input"
+                  />
+                </div>
+                <div class="input-parent-container h-18 p-[.2rem]">
+                  <div class="label" style="font-size: 0.7rem">NUMBER OF KEYHOLDERS</div>
+                  <input
+                    type="text"
+                    id="lab-n-keyholders"
+                    disabled
+                    value="3 KEYHOLDERS"
+                    class="w-full bg-transparent outline-none text-[0.95rem] input"
+                  />
+                </div>
+              </div>
+              <div
+                class="input-parent-container mt-[.6rem] h-18 p-[.2rem]"
+                style="border: 1px solid #ff4d4d"
+              >
+                <div class="flex flex-row justify-between items-center">
+                  <div class="flex flex-col">
+                    <div class="label" style="font-size: 0.7rem">PLAYER ID</div>
+                    <input
+                      type="text"
+                      id="buyer-id"
+                      class="w-full bg-transparent outline-none text-[1rem] input"
+                    />
+                  </div>
+                  <img src="/assets/icons/person-red.svg" class="h-5 mr-1" />
+                </div>
+              </div>
+              <div
+                id="transfer-btn"
+                class="btn-red border-[2.5px] text-[.9rem] rounded-[5px] my-2"
+              >
+                TRANSFER
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2 w-[30%] h-full justify-between">
+          <div class="card" style="font-family: 'Gilroy-Medium';">
+            <div class="label mb-[.4rem]">YOUR LABORATORY</div>
+            <img id="lab-image" class="p-[.1rem] rounded-md" src="https://cdn.discordapp.com/attachments/611354312387461126/1289678540098240584/Screenshot_2024-03-16_161246.png?ex=66f9b23d&is=66f860bd&hm=27bda711e66dad8bb6a62a23bc19b35a4b25db6ec73c7baeb2307902b977d5ec&" alt="">
+            <div class="flex flex-row justify-between px-2 mt-2">
+              <div class="text-white">STATUS</div>
+              <div id="cctv-status" class="status text-[1.07rem]">NOT INSTALLED</div>
+            </div>
+            <div id="open-cctv" class="btn text-[1rem] rounded-[5px] my-2">OPEN OUTDOOR CCTV</div>
+          </div>
+          <div class="card" style="font-family: 'Gilroy-Medium';">
+            <div class="label mb-[.4rem]">LABORATORY STATUS</div>
+            <div id="lab-stats" class="flex flex-col gap-2">
+              <div class="card">
+                <div class="text-white">EQUIPEMENT HEALTH</div>
+                <div class="w-full bg-[#454545] h-2 rounded mt-1">
+                  <div class="w-[75%] bg-[#46D08B] h-2 rounded mt-1"></div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="text-white">WATER PUMP LEVEL</div>
+                <div class="w-full bg-[#454545] h-2 rounded mt-1">
+                  <div class="w-[15%] bg-[#FF3535] h-2 rounded mt-1"></div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="text-white">FUME LEVELS</div>
+                <div class="w-full bg-[#454545] h-2 rounded mt-1">
+                  <div class="w-[90%] bg-[#FF3535] h-2 rounded mt-1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2 w-[30%] h-full justify-between">
+          <div class="card">
+            <div class="label mb-[.4rem]">BUY EQUIPEMENTS</div>
+            <div id="store-items" class="flex flex-col gap-[.3rem]" style="font-family: 'Gilroy-Medium';">
+              <div class="item flex flex-row p-2 justify-between card" style="padding: 0.5rem;">
+                <div class="text-white">DOKIA PHONE</div>
+                <div class="text-[#54FEA9]">1000$</div>
+              </div>
+              <div class="item flex flex-row p-2 justify-between card" style="padding: 0.5rem;">
+                <div class="text-white">LAB COAT</div>
+                <div class="text-[#54FEA9]">500$</div>
+              </div>
+              <div class="item active flex flex-row p-2 justify-between card" style="padding: 0.5rem;">
+                <div class="text-white">AIR FANS</div>
+                <div class="text-[#54FEA9]">700$</div>
+              </div>
+              <div class="item flex flex-row p-2 justify-between card" style="padding: 0.5rem;">
+                <div class="text-white">LIGHT BULBS</div>
+                <div class="text-[#54FEA9]">1000$</div>
+              </div>
+            </div>
+            <div id="buy-items" class="btn text-[1rem] my-2">BUY SELECTED ITEMS</div>
+          </div>
+          <div class="card">
+              <div class="label mb-[.3rem]">UPGRADES</div>
+              <div class="flex flex-col gap-[.3rem]" id="lab-upgrades" style="font-family: 'Gilroy-Medium';">
+                <div class="item relative item-upgrade card flex flex-col">
+                  <div class="opacity-0 absolute mt-[-.5rem] ml-[-.5rem] w-full h-full upgrade-hover flex justify-center items-center bg-[#103422] text-white" style="font-family: 'Joyride STD';">UPGRADE FOR 5,000$</div>
+                  <div class="upgrade-content flex flex-col">
+                    <div class="flex flex-row justify-between">
+                      <div class="text-white">OUTDOOR CCTV</div>
+                      <div class="text-[#54FEA9]">15,000$</div>
+                    </div>
+                    <div class="text-[.7rem] w-3/4 h-full text-[#BCBCBC]">INSTALL CCTV CAMERAS AT YOUR GARAGE DOOR TO CHECK THE ENTRANCE</div>
+                  </div>
+                </div>
+                <div class="item relative item-upgrade card flex flex-col">
+                  <div class="opacity-0 absolute mt-[-.5rem] ml-[-.5rem] w-full h-full upgrade-hover flex justify-center items-center bg-[#103422] text-white" style="font-family: 'Joyride STD';">UPGRADE FOR 3,000$</div>
+                  <div class="upgrade-content flex flex-col">
+                    <div class="flex flex-row justify-between">
+                      <div class="text-white">50KG STASH</div>
+                      <div class="text-[#54FEA9]">3,000$</div>
+                    </div>
+                    <div class="text-[.7rem] w-3/4 h-full text-[#BCBCBC]">INSTALL CCTV CAMERAS AT YOUR GARAGE DOOR TO CHECK THE ENTRANCE</div>
+                  </div>
+                </div>
+                <div class="item relative item-upgrade card flex flex-col">
+                  <!-- <div class="opacity-0 absolute mt-[-.5rem] ml-[-.5rem] w-full h-full upgrade-hover flex justify-center items-center bg-[#103422] text-white" style="font-family: 'Joyride STD';">UPGRADE FOR 3,000$</div> -->
+                  <div class="upgrade-content flex flex-col">
+                    <div class="flex flex-row justify-between">
+                      <div class="text-white">DOOR LOCK</div>
+                      <div class="text-[#54FEA9]">INSTALLED</div>
+                    </div>
+                    <div class="text-[.7rem] w-3/4 h-full text-[#BCBCBC]">INSTALL CCTV CAMERAS AT YOUR GARAGE DOOR TO CHECK THE ENTRANCE</div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="darkweb-container hidden w-[80rem] h-[46rem] bg-zinc-950">
+      <div
+        class="flex flex-row items-center gap-4 h-[15%] w-full bg-[#111114] px-4 border-solid border-b-2 border-zinc-800"
+      >
+        <img src="/assets/darkweb-logo.png" class="w-24 h-24" />
+        <h1 class="text-zinc-50 text-[2.5rem]" style="font-family: 'HACKED'">
+          EQUIPEMENTS CATALOGUE
+        </h1>
+      </div>
+      <div
+        id="catalogue-items"
+        class="flex flex-row mt-4 h-[80%] w-[full] justify-around items-center"
+      >
+        <div class="card flex flex-col gap-2 h-full w-[30%] p-2">
+          <h1
+            class="text-zinc-50 w-full text-center text-[1.8rem]"
+            style="font-family: 'HACKED'"
+          >
+            METH LAB EQUIPEMENTS
+          </h1>
+          <img src="assets/previews/meth-lab.jpeg" alt="" />
+          <h1
+            class="w-full text-center text-bold text-zinc-100 text-[1.3rem]"
+            style="font-family: 'PSemiBold'"
+          >
+            Details:
+          </h1>
+          <p
+            class="w-full text-zinc-200 h-[30%]"
+            style="font-family: 'PMedium'"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+            quis possimus molestiae deserunt ratione magnam ipsam iste, quia
+            error, debitis sed! Fuga, provident.
+          </p>
+          <h1
+            class="w-full text-center text-bold text-zinc-100 text-[1.3rem]"
+            style="font-family: 'PSemiBold'"
+          >
+            Price:
+          </h1>
+          <p
+            class="text-green-400 w-full text-center text-[1.4rem] mt-[-12px]"
+            style="font-family: 'PMedium'"
+          >
+            20,000$
+          </p>
+          <div
+            class="text-center bg-green-400 mt-4 rounded-sm text-[1.7rem] hover:bg-green-500"
+            style="font-family: 'HACKED'; cursor: pointer"
+          >
+            BUY EQUIPEMENTS
+          </div>
+        </div>
+        <div class="card flex flex-col gap-2 h-full w-[30%] p-2">
+          <h1
+            class="text-zinc-50 w-full text-center text-[1.8rem]"
+            style="font-family: 'HACKED'"
+          >
+            COKE LAB EQUIPEMENTS
+          </h1>
+          <img src="assets/previews/coke-lab.jpeg" alt="" />
+          <h1
+            class="w-full text-center text-bold text-zinc-100 text-[1.3rem]"
+            style="font-family: 'PSemiBold'"
+          >
+            Details:
+          </h1>
+          <p
+            class="w-full text-zinc-200 h-[30%]"
+            style="font-family: 'PMedium'"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+            quis possimus molestiae deserunt ratione magnam ipsam iste, quia
+            error, debitis sed! Fuga, provident.
+          </p>
+          <h1
+            class="w-full text-center text-bold text-zinc-100 text-[1.3rem]"
+            style="font-family: 'PSemiBold'"
+          >
+            Price:
+          </h1>
+          <p
+            class="text-green-400 w-full text-center text-[1.4rem] mt-[-12px]"
+            style="font-family: 'PMedium'"
+          >
+            15,000$
+          </p>
+          <div
+            class="text-center bg-green-400 mt-4 rounded-sm text-[1.7rem] hover:bg-green-500"
+            style="font-family: 'HACKED'; cursor: pointer"
+          >
+            BUY EQUIPEMENTS
+          </div>
+        </div>
+        <div class="card flex flex-col gap-2 h-full w-[30%] p-2">
+          <h1
+            class="text-zinc-50 w-full text-center text-[1.8rem]"
+            style="font-family: 'HACKED'"
+          >
+            WEED LAB EQUIPEMENTS
+          </h1>
+          <img src="assets/previews/weed-lab.jpeg" alt="" />
+          <h1
+            class="w-full text-center text-bold text-zinc-100 text-[1.3rem]"
+            style="font-family: 'PSemiBold'"
+          >
+            Details:
+          </h1>
+          <p
+            class="w-full text-zinc-200 h-[30%]"
+            style="font-family: 'PMedium'"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+            quis possimus molestiae deserunt ratione magnam ipsam iste, quia
+            error, debitis sed! Fuga, provident.
+          </p>
+          <h1
+            class="w-full text-center text-bold text-zinc-100 text-[1.3rem]"
+            style="font-family: 'PSemiBold'"
+          >
+            Price:
+          </h1>
+          <p
+            class="text-green-400 w-full text-center text-[1.4rem] mt-[-12px]"
+            style="font-family: 'PMedium'"
+          >
+            10,000$
+          </p>
+          <div
+            class="text-center bg-green-400 mt-4 rounded-sm text-[1.7rem] hover:bg-green-500"
+            style="font-family: 'HACKED'; cursor: pointer"
+          >
+            BUY EQUIPEMENTS
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="status-container hidden w-[22rem] rounded-sm px-2">
+      <div class="title text-[1.5rem] mb-1">PLANT STATUS</div>
+      <div class="flex flex-col gap-3 p-2">
+        <div class="input-parent-container bg-[#1A1A1A]">
+          <div class="flex flex-row justify-between items-center">
+            <div class="flex flex-col">
+              <div class="label">SEED TYPE</div>
+              <input
+                type="text"
+                id="seed-type"
+                value="PURPLE HAZE"
+                disabled
+                class="w-full bg-transparent outline-none text-[1.2rem] input green-glow"
+              />
+            </div>
+            <img src="/assets/icons/cannabis.svg" class="h-6 mr-1" />
+          </div>
+        </div>
+        <div class="input-parent-container drying-bar-parent bg-[#1A1A1A]">
+          <div class="flex flex-col justify-between">
+            <div class="label">Drying</div>
+            <div class="w-full bg-[#454545] h-[10px] rounded-xl my-[.5rem]">
+              <div id="drying-bar" class="w-[20%] h-[10px] rounded-xl glow-green"></div>
+            </div>
+          </div>
+        </div>
+        <div class="input-parent-container growth-bar-parent bg-[#1A1A1A]">
+          <div class="flex flex-col justify-between">
+            <div class="label">GROWTH</div>
+            <div class="w-full bg-[#454545] h-[10px] rounded-xl my-[.5rem]">
+              <div id="growth-bar" class="w-[20%] h-[10px] rounded-xl glow-green"></div>
+            </div>
+          </div>
+        </div>
+        <div class="input-parent-container plant-health-parent bg-[#1A1A1A]">
+          <div class="flex flex-col justify-between">
+            <div class="label">PLANT HEALTH</div>
+            <div class="w-full bg-[#454545] h-[10px] rounded-xl my-[.5rem]">
+              <div id="plant-health" class="w-[40%] h-[10px] rounded-xl glow-orange"></div>
+            </div>
+          </div>
+        </div>
+        <div class="input-parent-container plant-water-parent bg-[#1A1A1A]">
+          <div class="flex flex-col justify-between">
+            <div class="label">WATER LEVEL</div>
+            <div class="w-full bg-[#454545] h-[10px] rounded-xl my-[.5rem]">
+              <div id="plant-water" class="w-[20%] h-[10px] rounded-xl glow-red"></div>
+            </div>
+          </div>
+        </div>
+        <div class="input-parent-container plant-fertilizer-parent bg-[#1A1A1A]">
+          <div class="flex flex-col justify-between">
+            <div class="label">FERTILIZER DENSITY</div>
+            <div class="w-full bg-[#454545] h-[10px] rounded-xl my-[.5rem]">
+              <div id="plant-fertilizer" class="w-[75%] h-[10px] rounded-xl glow-green"></div>
+            </div>
+          </div>
+        </div>
+        <div class="input-parent-container plant-light-parent bg-[#1A1A1A]">
+          <div class="flex flex-col justify-between">
+            <div class="label">LIGHT</div>
+            <div class="w-full bg-[#454545] h-[10px] rounded-xl my-[.5rem]">
+              <div id="plant-light" class="w-[75%] h-[10px] rounded-xl glow-green"></div>
+            </div>
+          </div>
+        </div>
+        <div class="input-parent-container plant-fan-parent bg-[#1A1A1A]">
+          <div class="flex flex-col justify-between">
+            <div class="label">AIR VENTILLATION</div>
+            <div class="w-full bg-[#454545] h-[10px] rounded-xl my-[.5rem]">
+              <div id="plant-fan" class="w-[45%] h-[10px] rounded-xl glow-orange"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="termometer-wrapper" style="display: none">
+      <div id="termometer">
+        <div id="temperature" style="height: 0" data-value="0°C"></div>
+        <div id="graduations"></div>
+      </div>
+    </div>
+    <div
+      id="barometer-wrapper"
+      style="
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15rem;
+        margin-left: 60rem;
+      "
+    >
+      <canvas
+        width="720"
+        height="280"
+        id="canvas-preview"
+        style="pointer-events: none"
+      ></canvas>
+    </div>
+
+    <script type="module" src="./nokia.js"></script>
+    <script type="module" src="./lab.js"></script>
+    <script type="module" src="./equipment.js"></script>
+    <script type="module" src="./termometer.js"></script>
+  </body>
+</html>
