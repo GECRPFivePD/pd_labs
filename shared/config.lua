@@ -5,7 +5,7 @@ Config.devMode = false      -- true or false
 
 Config.Creator = {          -- Creator of the lab
     Command = "clab",       -- Command to create the lab
-    Job = "police",         -- Job of the creator
+    Job = "realestate",         -- Job of the creator
 }
 
 Config.LabCoat = {
