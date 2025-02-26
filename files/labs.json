@@ -1,22 +1,46 @@
 [
     {
+        "racks": [
+            null,
+            null,
+            [
+                [],
+                [],
+                [],
+                []
+            ],
+            [
+                [],
+                [],
+                [],
+                []
+            ],
+            [
+                [],
+                [],
+                [],
+                []
+            ]
+        ],
+        "owner": "S20T3950",
+        "blipColor": "9",
         "price": 5000,
+        "upgrades": {
+            "equipped": true
+        },
+        "ownership": "personal",
         "keyHolders": [],
-        "id": 1,
-        "labType": "meth",
         "coords": {
-            "w": 355.451416015625,
-            "z": 29.34434509277343,
             "y": -1403.4781494140626,
+            "z": 29.34434509277343,
+            "w": 355.451416015625,
             "x": 37.9538345336914
         },
-        "blipColor": "9",
-        "owner": "S20T3950",
-        "upgrades": {
-            "equipped": true
-        },
-        "ownership": "personal",
         "name": "Heisenberg's Lab",
+        "id": 1,
+        "labType": "meth"
+    },
+    {
         "racks": [
             null,
             null,
@@ -38,24 +62,24 @@
                 [],
                 []
             ]
-        ]
-    },
-    {
+        ],
+        "owner": "S20T3950",
+        "blipColor": "9",
         "price": 5000,
+        "upgrades": [],
+        "ownership": "personal",
         "keyHolders": [],
-        "id": 2,
-        "labType": "meth",
         "coords": {
-            "w": 358.5604553222656,
-            "z": 29.33861351013183,
             "y": -1403.4632568359376,
+            "z": 29.33861351013183,
+            "w": 358.5604553222656,
             "x": 37.85639572143555
         },
-        "blipColor": "9",
-        "owner": "S20T3950",
-        "upgrades": [],
-        "ownership": "personal",
         "name": "Heisenburg's Lab",
+        "id": 2,
+        "labType": "meth"
+    },
+    {
         "racks": [
             null,
             null,
@@ -77,48 +101,24 @@
                 [],
                 []
             ]
-        ]
-    },
-    {
+        ],
+        "owner": "S20T3950",
+        "blipColor": "9",
         "price": 5000,
+        "upgrades": {
+            "equipped": true
+        },
+        "ownership": "personal",
         "keyHolders": [],
-        "id": 3,
-        "labType": "meth",
         "coords": {
-            "w": 357.8223876953125,
-            "z": 29.33876228332519,
             "y": -1403.468017578125,
+            "z": 29.33876228332519,
+            "w": 357.8223876953125,
             "x": 37.93960189819336
         },
-        "blipColor": "9",
-        "owner": "S20T3950",
-        "upgrades": {
-            "equipped": true
-        },
-        "ownership": "personal",
         "name": "Heisenburg's Lab",
-        "racks": [
-            null,
-            null,
-            [
-                [],
-                [],
-                [],
-                []
-            ],
-            [
-                [],
-                [],
-                [],
-                []
-            ],
-            [
-                [],
-                [],
-                [],
-                []
-            ]
-        ]
+        "id": 3,
+        "labType": "meth"
     },
     {
         "racks": [
@@ -143,38 +143,25 @@
                 []
             ]
         ],
+        "owner": "S20T3950",
+        "blipColor": "9",
+        "price": 5000,
+        "upgrades": {
+            "equipped": true
+        },
+        "ownership": "personal",
         "keyHolders": [],
-        "id": 4,
-        "labType": "meth",
         "coords": {
-            "w": 359.9117736816406,
-            "z": 29.33858680725097,
             "y": -1403.4716796875,
+            "z": 29.33858680725097,
+            "w": 359.9117736816406,
             "x": 37.8528823852539
         },
-        "blipColor": "9",
-        "owner": "S20T3950",
-        "upgrades": {
-            "equipped": true
-        },
-        "ownership": "personal",
         "name": "Heisenburg's Lab",
-        "price": 5000
+        "id": 4,
+        "labType": "meth"
     },
     {
-        "price": 5000,
-        "keyHolders": [],
-        "id": 5,
-        "labType": "meth",
-        "coords": {
-            "w": 355.6739196777344,
-            "z": 29.34659767150879,
-            "y": -1406.5858154296876,
-            "x": 37.92508697509765
-        },
-        "blipColor": "9",
-        "owner": "S20T3950",
-        "upgrades": [],
         "racks": [
             null,
             null,
@@ -197,30 +184,23 @@
                 []
             ]
         ],
+        "owner": "S20T3950",
+        "blipColor": "9",
+        "price": 5000,
+        "upgrades": [],
+        "ownership": "personal",
+        "keyHolders": [],
+        "coords": {
+            "y": -1406.5858154296876,
+            "z": 29.34659767150879,
+            "w": 355.6739196777344,
+            "x": 37.92508697509765
+        },
         "name": "TEST METH",
-        "ownership": "personal"
+        "id": 5,
+        "labType": "meth"
     },
     {
-        "price": 1,
-        "keyHolders": [],
-        "waterPump": 100,
-        "id": 6,
-        "labType": "meth",
-        "coords": {
-            "w": 129.2584686279297,
-            "z": 4.53816413879394,
-            "y": -1532.624755859375,
-            "x": -1161.54052734375
-        },
-        "blipColor": "9",
-        "ownership": "personal",
-        "equipementHealth": 100,
-        "upgrades": {
-            "equipped": true,
-            "cctv": true
-        },
-        "owner": "WNJOSL07",
-        "name": "Mason's Meth Lab",
         "racks": [
             null,
             null,
@@ -242,6 +222,29 @@
                 [],
                 []
             ]
-        ]
+        ],
+        "owner": "WNJOSL07",
+        "fume": 0,
+        "price": 1,
+        "upgrades": {
+            "cctv": true,
+            "equipped": true
+        },
+        "id": 6,
+        "ownership": "personal",
+        "name": "Mason's Meth Lab",
+        "equipementHealth": 100,
+        "keyHolders": [
+            "B022F4R3"
+        ],
+        "labType": "meth",
+        "waterPump": 0,
+        "coords": {
+            "y": -1532.624755859375,
+            "z": 4.53816413879394,
+            "w": 129.2584686279297,
+            "x": -1161.54052734375
+        },
+        "blipColor": "9"
     }
 ]
